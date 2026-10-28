@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030705">
+  <meta name="description" content="Proteja o salário da sua família contra a indústria dos golpes digitais. Aprenda a blindar seu WhatsApp, celular e contas bancárias com o Anti-Golpe.">
+  <title>Anti-Golpe | Blindagem Digital para Você e sua Família</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-darkest: #040806;
+      --bg-main: #070d09;
+      --bg-card: #0d1712;
+      --bg-card-hover: #12211a;
+      --border-card: #193123;
+      --border-subtle: rgba(46, 204, 113, 0.15);
+      --green-primary: #00e676;
+      --green-glow: rgba(0, 230, 118, 0.25);
+      --green-dark: #008744;
+      --accent-gold: #ffb703;
+      --danger-red: #ff4757;
+      --text-white: #ffffff;
+      --text-muted: #9ab4a3;
+      --text-sub: #7a9484;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--bg-darkest);
+      color: var(--text-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Top Alert Bar */
+    .alert-bar {
+      background: linear-gradient(90deg, #1b0c0d, #2d1214, #1b0c0d);
+      border-bottom: 1px solid rgba(255, 71, 87, 0.3);
+      padding: 9px 12px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ff9ca6;
+    }
+    .alert-bar strong {
+      color: #fff;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(4, 8, 6, 0.92);
+      border-bottom: 1px solid var(--border-card);
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, #00e676, #008744);
+      color: #030705;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--green-primary);
+      transition: color .2s;
+    }
+
+    /* Primary Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #00e676, #00c853);
+      color: #030a05;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 16px 30px;
+      border-radius: 12px;
+      transition: all .25s ease;
+      box-shadow: 0 10px 25px var(--green-glow);
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(0, 230, 118, 0.4);
+      background: linear-gradient(135deg, #46ff9f, #00e676);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-white);
+      border: 1px solid var(--border-card);
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card);
+      border-color: var(--green-primary);
+      color: var(--green-primary);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 70px 0 80px;
+      background: 
+        radial-gradient(circle at 75% 20%, rgba(0, 230, 118, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 20% 60%, rgba(0, 135, 68, 0.07) 0%, transparent 40%),
+        var(--bg-darkest);
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 230, 118, 0.08);
+      border: 1px solid rgba(0, 230, 118, 0.3);
+      color: var(--green-primary);
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .pill-tag span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--green-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green-primary);
+    }
+
+    h1 {
+      font-size: clamp(34px, 4.5vw, 56px);
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(120deg, #00e676, #9effc7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      color: var(--text-muted);
+      font-size: 18px;
+      line-height: 1.65;
+      margin-bottom: 30px;
+      max-width: 610px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .trust-badges {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border-card);
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    /* Hero Visual Card */
+    .hero-visual {
+      position: relative;
+    }
+
+    .main-hero-image-wrapper {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border-card);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .main-hero-image-wrapper img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      filter: brightness(0.88);
+      transition: transform 0.4s ease;
+    }
+
+    .main-hero-image-wrapper:hover img {
+      transform: scale(1.02);
+    }
+
+    .floating-card {
+      position: absolute;
+      background: rgba(13, 23, 18, 0.95);
+      border: 1px solid var(--border-card);
+      backdrop-filter: blur(12px);
+      padding: 14px 18px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+    }
+
+    .floating-card-top {
+      top: -20px;
+      right: -15px;
+      border-color: rgba(255, 71, 87, 0.35);
+    }
+
+    .floating-card-bottom {
+      bottom: -20px;
+      left: -15px;
+      border-color: rgba(0, 230, 118, 0.35);
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .status-danger {
+      background: var(--danger-red);
+      box-shadow: 0 0 12px var(--danger-red);
+    }
+
+    .status-success {
+      background: var(--green-primary);
+      box-shadow: 0 0 12px var(--green-primary);
+    }
+
+    .floating-text h4 {
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .floating-text p {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Reality / Worker Section */
+    .section-worker {
+      padding: 90px 0;
+      background: linear-gradient(180deg, var(--bg-darkest), var(--bg-main));
+      border-top: 1px solid var(--border-card);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 55px;
+    }
+
+    .section-header .tagline {
+      color: var(--green-primary);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-header h2 {
+      font-size: clamp(28px, 3.8vw, 42px);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .story-image-box {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-card);
+      position: relative;
+    }
+
+    .story-image-box img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .story-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(4,8,6,0.9) 10%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 30px;
+    }
+
+    .story-quote {
+      font-style: italic;
+      font-size: 15px;
+      color: #e5f5eb;
+      border-left: 3px solid var(--green-primary);
+      padding-left: 14px;
+    }
+
+    .scam-scenarios {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .scenario-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 18px 22px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: all .25s ease;
+    }
+
+    .scenario-card:hover {
+      border-color: rgba(0, 230, 118, 0.4);
+      background: var(--bg-card-hover);
+      transform: translateX(4px);
+    }
+
+    .scenario-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.05);
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+    }
+
+    .scenario-card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+
+    .scenario-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Daily Life Benefits */
+    .section-benefits {
+      padding: 95px 0;
+      background: var(--bg-darkest);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s ease, border-color .3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(0, 230, 118, 0.4);
+    }
+
+    .feature-thumb {
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .feature-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .feature-card:hover .feature-thumb img {
+      transform: scale(1.06);
+    }
+
+    .feature-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(4, 8, 6, 0.9);
+      border: 1px solid var(--border-card);
+      color: var(--green-primary);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .feature-content {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-content h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .feature-content p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+
+    .feature-list {
+      margin-top: auto;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12.5px;
+      color: #d1e5d9;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 14px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .feature-list li::before {
+      content: "✔";
+      color: var(--green-primary);
+      font-weight: 900;
+      font-size: 11px;
+    }
+
+    /* Comparison Table */
+    .section-comparison {
+      padding: 80px 0;
+      background: var(--bg-main);
+      border-top: 1px solid var(--border-card);
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .comp-box {
+      border-radius: 18px;
+      padding: 30px;
+      position: relative;
+    }
+
+    .comp-box.negative {
+      background: rgba(255, 71, 87, 0.04);
+      border: 1px solid rgba(255, 71, 87, 0.2);
+    }
+
+    .comp-box.positive {
+      background: rgba(0, 230, 118, 0.04);
+      border: 1px solid rgba(0, 230, 118, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 230, 118, 0.05);
+    }
+
+    .comp-box h3 {
+      font-size: 20px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .comp-box.negative h3 {
+      color: #ff7684;
+    }
+
+    .comp-box.positive h3 {
+      color: var(--green-primary);
+    }
+
+    .comp-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .comp-box li {
+      font-size: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .comp-box.negative li span {
+      color: var(--danger-red);
+      font-weight: bold;
+    }
+
+    .comp-box.positive li span {
+      color: var(--green-primary);
+      font-weight: bold;
+    }
+
+    /* Testimonials */
+    .section-testimonials {
+      padding: 90px 0;
+      background: var(--bg-darkest);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 18px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial-user {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .user-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--green-primary);
+      object-fit: cover;
+    }
+
+    .user-info h4 {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .user-info p {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .stars {
+      color: var(--accent-gold);
+      font-size: 14px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-card p.text {
+      font-size: 13.5px;
+      color: #d6e8dc;
+      line-height: 1.6;
+    }
+
+    /* Big CTA Banner */
+    .section-offer {
+      padding: 90px 0;
+      background: radial-gradient(circle at center, rgba(0, 230, 118, 0.12) 0%, transparent 65%), var(--bg-main);
+      border-top: 1px solid var(--border-card);
+      text-align: center;
+    }
+
+    .offer-box {
+      max-width: 820px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, #0f1c15, #08120c);
+      border: 1px solid rgba(0, 230, 118, 0.35);
+      border-radius: 28px;
+      padding: 55px 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 230, 118, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #008744, #00e676, #008744);
+    }
+
+    .offer-badge {
+      display: inline-block;
+      background: var(--accent-gold);
+      color: #050a07;
+      font-weight: 900;
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .offer-box h2 {
+      font-size: clamp(30px, 4.5vw, 46px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .offer-box p.desc {
+      color: var(--text-muted);
+      font-size: 17px;
+      max-width: 620px;
+      margin: 0 auto 30px;
+    }
+
+    .guarantee-note {
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--text-sub);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* FAQ */
+    .section-faq {
+      padding: 90px 0;
+      background: var(--bg-darkest);
+    }
+
+    .faq-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 14px;
+      padding: 18px 22px;
+      transition: all .2s;
+    }
+
+    details[open] {
+      border-color: rgba(0, 230, 118, 0.4);
+      background: var(--bg-card-hover);
+    }
+
+    summary {
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 22px;
+      color: var(--green-primary);
+      transition: transform .2s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      margin-top: 14px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: #020504;
+      border-top: 1px solid #142319;
+      padding: 45px 0 30px;
+      color: var(--text-sub);
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .footer-disclaimer {
+      font-size: 12px;
+      color: #5d7567;
+      line-height: 1.6;
+      border-top: 1px solid #0f1c14;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid, .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .cards-grid, .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .main-hero-image-wrapper img {
+        height: 380px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links .nav-item-hide {
+        display: none;
+      }
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+      .cards-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-actions .btn {
+        width: 100%;
+      }
+      .floating-card {
+        position: static;
+        margin-top: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Real Alert Bar -->
+  <aside class="alert-bar">
+    ⚠️ <strong>ALERTA NACIONAL:</strong> Mais de 4.200 golpes do Pix e links clonados são registrados a cada hora no Brasil. Proteja o seu salário.
+  </aside>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#inicio">
+          🛡️ ANTI-GOLPE <span class="logo-badge">Proteção Ativa</span>
+        </a>
+
+        <div class="nav-links">
+          <a class="nav-item-hide" href="#por-que-comprar">Por que ter?</a>
+          <a class="nav-item-hide" href="#dia-a-dia">No dia a dia</a>
+          <a class="nav-item-hide" href="#depoimentos">Depoimentos</a>
+          <a href="#perguntas">Dúvidas</a>
+          <a class="btn" href="https://blackpix.ai.studio/checkout/oferta-3513e205-copia-12na" target="_blank" rel="noopener noreferrer">
+            Garantir Proteção Agora
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill-tag">
+            <span></span> BLINDAGEM DIGITAL PARA SUA FAMÍLIA
+          </div>
+
+          <h1>
+            Seu salário levou um mês para ser ganho.<br>
+            <span class="highlight">Não deixe um golpista levar em 30 segundos.</span>
+          </h1>
+
+          <p class="hero-lead">
+            O método prático definitivo criado para trabalhadores e chefes de família identificarem na hora falsas cobranças do Pix, mensagens clonadas de familiares, boletos adulterados e falsas entregas no celular.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="https://blackpix.ai.studio/checkout/oferta-3513e205-copia-12na" target="_blank" rel="noopener noreferrer">
+              🛡️ Quero Proteger Minha Família Agora
+            </a>
+            <a class="btn btn-secondary" href="#por-que-comprar">
+              Entenda como funciona ↓
+            </a>
+          </div>
+
+          <div class="trust-badges">
+            <div class="trust-item">🔒 Acesso Imediato & Seguro</div>
+            <div class="trust-item">📱 Funciona em qualquer Celular</div>
+            <div class="trust-item">⚡ Linguagem Fácil e Direta</div>
+          </div>
+        </div>
+
+        <!-- Hero Graphic with Real Photo and Badges -->
+        <div class="hero-visual">
+          <div class="floating-card floating-card-top">
+            <div class="status-dot status-danger"></div>
+            <div class="floating-text">
+              <h4>SMS: "Taxa dos Correios Pendente"</h4>
+              <p>Golpe bloqueado antes do clique</p>
+            </div>
+          </div>
+
+          <div class="main-hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?auto=format&fit=crop&w=900&q=85" alt="Pai de família usando celular com segurança">
+          </div>
+
+          <div class="floating-card floating-card-bottom">
+            <div class="status-dot status-success"></div>
+            <div class="floating-text">
+              <h4>Conta Bancária & WhatsApp Protegidos</h4>
+              <p>Zero risco para sua reserva financeira</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Working People Need It -->
+    <section class="section-worker" id="por-que-comprar">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">A Realidade Que Ninguém Te Conta</span>
+          <h2>Por que o trabalhador é o alvo número 1 dos golpistas?</h2>
+          <p>
+            Golpistas profissionais não atacam milionários cheios de advogados. Eles atacam quem tem pressa, quem trabalha duro, quem está esperando uma encomenda ou quem teme ter o nome sujo no Serasa.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-image-box">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85" alt="Trabalhador protegido de golpes online">
+            <div class="story-overlay">
+              <p class="story-quote">
+                "Um clique errado em um falso link de FGTS ou na taxa de uma encomenda falsa pode comprometer a feira do mês e o aluguel da sua casa."
+              </p>
+            </div>
+          </div>
+
+          <div class="scam-scenarios">
+            <article class="scenario-card">
+              <div class="scenario-icon">💬</div>
+              <div>
+                <h3>O Golpe do "Pai, troquei de número no WhatsApp"</h3>
+                <p>
+                  Eles usam a foto do seu filho ou parente, dizem que o celular quebrou e pedem um Pix urgente para pagar uma conta. Com o Anti-Golpe, você descobre a farsa em 5 segundos.
+                </p>
+              </div>
+            </article>
+
+            <article class="scenario-card">
+              <div class="scenario-icon">📦</div>
+              <div>
+                <h3>O Falso SMS dos Correios / Taxa de Entrega</h3>
+                <p>
+                  Você compra algo pela internet e recebe uma mensagem dizendo que seu pacote foi retido na alfândega e exige um Pix. Ensinamos a nunca mais ser enganado por esses sites espelhados.
+                </p>
+              </div>
+            </article>
+
+            <article class="scenario-card">
+              <div class="scenario-icon">🏦</div>
+              <div>
+                <h3>A Falsa Central Telefônica do Banco</h3>
+                <p>
+                  Uma voz profissional liga dizendo que uma compra suspeita de R$ 3.000 foi feita na sua conta. Eles induzem você a transferir o dinheiro para "segurança". Você saberá exatamente como agir.
+                </p>
+              </div>
+            </article>
+
+            <article class="scenario-card">
+              <div class="scenario-icon">👵</div>
+              <div>
+                <h3>Proteção dos Seus Pais e Filhos Idosos</h3>
+                <p>
+                  Idosos são as maiores vítimas de falsos consignados e links premiados. Com o método, você blinda os celulares de quem você ama contra roubos invisíveis.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Life Benefits -->
+    <section class="section-benefits" id="dia-a-dia">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Tranquilidade no Cotidiano</span>
+          <h2>O que o Anti-Golpe faz pelo seu dia a dia?</h2>
+          <p>
+            Não é teoria chata ou linguagem difícil de informática. São soluções práticas e mastigadas para você aplicar em menos de 10 minutos no seu aparelho.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <article class="feature-card">
+            <div class="feature-thumb">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80" alt="Segurança bancária no celular">
+              <span class="feature-badge">Proteção Financeira</span>
+            </div>
+            <div class="feature-content">
+              <h3>Blindagem de Contas e Pix</h3>
+              <p>Aprenda configurações secretas no seu banco para impedir transferências indesejadas em caso de furto, perda de celular ou aplicativos espiões.</p>
+              <ul class="feature-list">
+                <li>Limites automáticos de segurança para a noite</li>
+                <li>Como blindar o aplicativo contra invasões</li>
+                <li>O teste rápido antes de fazer qualquer transferência</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-card">
+            <div class="feature-thumb">
+              <img src="https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=700&q=80" alt="Detecção de mensagens falsas no celular">
+              <span class="feature-badge">Filtro Antifraude</span>
+            </div>
+            <div class="feature-content">
+              <h3>Raio-X de Links & Mensagens</h3>
+              <p>Recebeu um link estranho por e-mail, SMS ou grupo da família? Saiba exatamente onde checar a segurança do site sem sequer precisar clicar nele.</p>
+              <ul class="feature-list">
+                <li>Desmascare encurtadores e páginas fakes</li>
+                <li>Identifique promoções irreais em lojas famosas</li>
+                <li>Checklist de validação rápida para o dia a dia</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-card">
+            <div class="feature-thumb">
+              <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=700&q=80" alt="Família reunida e protegida em casa">
+              <span class="feature-badge">Paz de Espírito</span>
+            </div>
+            <div class="feature-content">
+              <h3>Segurança para Toda a Família</h3>
+              <p>Tenha a tranquilidade de saber que sua esposa, marido, filhos e pais não vão cair em armadilhas digitais enquanto navegam nas redes sociais.</p>
+              <ul class="feature-list">
+                <li>Manual ilustrado para orientar idosos</li>
+                <li>Como evitar que clonem seu número de WhatsApp</li>
+                <li>Plano de Ação Imediato caso desconfie de algo</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison: Without vs With Anti-Golpe -->
+    <section class="section-comparison">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">A Escolha É Sua</span>
+          <h2>A diferença entre navegar desprotegido e ter o Anti-Golpe</h2>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comp-box negative">
+            <h3>❌ Sem o Anti-Golpe</h3>
+            <ul>
+              <li><span>✕</span> Qualquer mensagem convincente no WhatsApp pode enganar você ou seus pais.</li>
+              <li><span>✕</span> Risco constante de perder economias guardadas a custo de muito suor.</li>
+              <li><span>✕</span> Dúvida e pânico ao receber notificações de compras suspeitas no cartão.</li>
+              <li><span>✕</span> Celular desprotegido que expõe fotos, senhas e chaves bancárias a criminosos.</li>
+              <li><span>✕</span> Dor de cabeça com boletins de ocorrência que dificilmente recuperam o dinheiro perdido.</li>
+            </ul>
+          </div>
+
+          <div class="comp-box positive">
+            <h3>✅ Com o Anti-Golpe</h3>
+            <ul>
+              <li><span>✓</span> Olhar treinado para identificar armadilhas virtuais antes mesmo de clicar.</li>
+              <li><span>✓</span> Seu dinheiro guardado sob travas de segurança reais no aplicativo do banco.</li>
+              <li><span>✓</span> Instruções práticas para ensinar seus pais idosos a não responderem golpistas.</li>
+              <li><span>✓</span> Celular e WhatsApp blindados contra clonagem e acesso de terceiros.</li>
+              <li><span>✓</span> Paz mental absoluta para usar redes sociais e fazer compras online com tranquilidade.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Histórias Reais</span>
+          <h2>Quem protegeu seu dinheiro recomenda</h2>
+          <p>Veja como o Anti-Golpe salvou famílias brasileiras de grandes prejuízos.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Depoimento 1 -->
+          <article class="testimonial-card">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p class="text">
+                "Tentaram aplicar o golpe do celular quebrado fingindo ser meu filho mais velho na semana passada pedindo R$ 1.800 de transferência. Graças ao Anti-Golpe, identifiquei na mesma hora os erros que eles cometem. Salvou o meu salário!"
+              </p>
+            </div>
+            <div class="testimonial-user">
+              <img class="user-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Marcos Silveira">
+              <div class="user-info">
+                <h4>Marcos Silveira</h4>
+                <p>Motorista e Pai de Família • São Paulo/SP</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 2 -->
+          <article class="testimonial-card">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p class="text">
+                "Minha mãe quase caiu no golpe da falsa prova de vida do INSS. Comprei o material, apliquei as travas de segurança no celular dela e expliquei como funciona. Hoje fico tranquila sabendo que ela não cai mais em enroladas."
+              </p>
+            </div>
+            <div class="testimonial-user">
+              <img class="user-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Renata Gusmão">
+              <div class="user-info">
+                <h4>Renata Gusmão</h4>
+                <p>Supervisora de Caixa • Curitiba/PR</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 3 -->
+          <article class="testimonial-card">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p class="text">
+                "Instalei e configurei tudo no mesmo dia. Pouco tempo depois recebi uma mensagem idêntica à que mostra no treinamento sobre falso frete. Não caí e ainda avisei meus colegas de trabalho."
+              </p>
+            </div>
+            <div class="testimonial-user">
+              <img class="user-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Carlos Eduardo">
+              <div class="user-info">
+                <h4>Carlos Eduardo</h4>
+                <p>Eletricista Industrial • Belo Horizonte/MG</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Big CTA Offer -->
+    <section class="section-offer" id="oferta">
+      <div class="container">
+        <div class="offer-box">
+          <span class="offer-badge">Acesso Exclusivo & Vitalício</span>
+          <h2>Proteja o patrimônio de quem você ama hoje</h2>
+          <p class="desc">
+            Não espere ser a próxima vítima. Garanta o método prático Anti-Golpe e mantenha suas contas, WhatsApp e dinheiro 100% protegidos.
+          </p>
+          <a class="btn" href="https://blackpix.ai.studio/checkout/oferta-3513e205-copia-12na" target="_blank" rel="noopener noreferrer">
+            🛡️ Quero Acesso Imediato ao Anti-Golpe
+          </a>
+          <div class="guarantee-note">
+            <span>🔒 Pagamento 100% Seguro</span>
+            <span>⚡ Acesso Imediato</span>
+            <span>🛡️ Garantia de 7 Dias</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-faq" id="perguntas">
+      <div class="container">
+        <div class="section-header">
+          <span class="tagline">Tire suas dúvidas</span>
+          <h2>Perguntas Frequentes</h2>
+        </div>
+        <div class="faq-wrapper">
+          <details>
+            <summary>Como vou receber o acesso ao material?</summary>
+            <p>Assim que o pagamento for confirmado, você receberá instantaneamente um e-mail com os dados de acesso para começar a assistir e aplicar na hora.</p>
+          </details>
+          <details>
+            <summary>Preciso entender de informática para conseguir aplicar?</summary>
+            <p>Não! Todo o conteúdo foi desenvolvido em linguagem extremamente simples e prática, passo a passo, pensado para qualquer pessoa conseguir seguir direto no celular.</p>
+          </details>
+          <details>
+            <summary>Funciona para qualquer modelo de celular?</summary>
+            <p>Sim, todas as orientações e configurações funcionam tanto em aparelhos Android quanto em iPhones.</p>
+          </details>
+          <details>
+            <summary>E se eu não gostar ou achar difícil?</summary>
+            <p>Você tem 7 dias de garantia incondicional. Se por qualquer motivo você achar que não valeu a pena, basta solicitar o reembolso integral sem burocracia.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="logo">
+          🛡️ ANTI-GOLPE
+        </div>
+        <div>
+          © Todos os direitos reservados.
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        Este site e treinamento possuem finalidade exclusivamente educativa para prevenção a fraudes e segurança da informação. Não possuímos vínculo com instituições bancárias ou órgãos governamentais citados como exemplos ilustrativos.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
